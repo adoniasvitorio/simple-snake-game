@@ -30,7 +30,7 @@ void Setup()
 void Draw()
 {
     system("clear"); // if you using windows OS ghange this line for system("cls")
-    for (int i = 0; i < width + 1; i++)
+    for (int i = 0; i < width + 2; i++)
         cout << "#";
     cout << endl;
 
@@ -41,6 +41,10 @@ void Draw()
         {
             if (j == 0)
                 cout << "#";
+            if ( i == y && j == x)
+                cout << "0";
+            else if ( i == fruitY && j == fruitX )
+                cout << "F";
             else
                 cout << " ";
 
@@ -50,7 +54,7 @@ void Draw()
         cout << endl;
     }
 
-    for (int i = 0; i < width + 1; i++)
+    for (int i = 0; i < width + 2; i++)
         cout << "#";
     cout << endl;
 }
